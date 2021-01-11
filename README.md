@@ -1,1 +1,1 @@
-# python_functions
+This is a collection of useful python functions
