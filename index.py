@@ -1167,3 +1167,55 @@ with open('text.txt', 'w') as my_file:
 if(my_file.closed == False):
   my_file.close()
 print my_file.closed
+
+
+# Nested Functon
+def talf(phrase):
+  def say(word):
+    print(word)
+  words = phrase.split(' ')
+  for word in words:
+    say(word)
+
+talk("I am going to buy the milk")
+
+def count():
+  count = 0
+  def increament():
+    nonlocal count
+    count = count + 1
+    print(count)
+
+  increament()
+
+count()
+
+# Lambda Function (Anonymous Function
+lambda <arguments> : <expression>
+
+lambda a, b : a * b #Lambda function cannot be called directl;y
+
+multiply = lambda a, b : a * b 
+print(multiply(2, 2))
+
+# Loops
+items = [1, 2, 3, 4]
+for item in items:
+  print(item)
+
+for item in range(4):
+  print(item)
+
+for index, item in enumerate(items):
+  print(index, item)
+
+
+
+
+
+
+
+
+
+
+
