@@ -1210,10 +1210,64 @@ for index, item in enumerate(items):
   print(index, item)
 
 
+# Annotation
+def increament(n: int) -> int:
+  return n+1
+
+# Files and Folder in a dir
+import os
+
+dirname = '/users/AB/dev'
+dirfiles = os.listdir(dirname)
+print(files)
+
+  # To get the full path to a file
+temp = map(lambda name:
+  os.path.join(dirname, name), dirfiles)
+
+print(list(temp))
+
+  # To list only the files
+dirs = []
+files = []
+
+for file in temp:
+  if os.path.isdir(file):
+    dirs.append(file)
+  if os.path.isfile(file):
+    files.append(file)
+
+print(list(dirs))
+print(list(files))
+
+# To chech even or odd
+numbers = [1, 2, 3, 4, 5]
+
+even = filter(lambda n: n % 2 == 0, numbers)
+odd = filter(lambda n: n % 2 == 1, numbers)
+
+print(list(even))
+print(list(odd))
 
 
+# To get the details of a file
+# os.path.getsize, os.path.getmtime, os.path.getctime
+import os
 
+filename = '/users/AB/test.txt'
 
+print(os.path.getsize(filename))
+print(os.path.getmtime(filename)) #last modified
+print(os.path.getctime(filename)) #created time
+print(os.stat(filename)) #full details of file
+
+stats = os.stat(filename)
+print(stats.st_size)
+print(stats.sy_mtime)
+
+#To chech if a file of dir exists
+exits = os.path.exists(filename)
+print(exists)
 
 
 
